@@ -18,13 +18,13 @@ class WorldMapsShortcode extends Shortcode {
             $height = $params['height'] ?? $config['default-height'];
             $width = $params['width'] ?? $config['default-width'];
             $shape = $params['shape'] ?? $config['default-shape'];
-            $color = $params['color'] ?? $config['color']; 
-            $backgroundColor = $params['background-color'] ?? $config['background-color'];
-            $hoverColor = $params['hover-color'] ?? $config['hover-color'];
-            $borderColor = $params['border-color'] ?? $config['border-color']; 
-            $selectedColor = $params['selected-color'] ?? $config['selected-color']; 
-            $enableZoom = $params['enable-zoom'] ?? $config['enable-zoom']; 
-            $multiSelectRegion = $params['multiselect-region'] ?? $config['multiselect-region']; 
+            $color = $params['color'] ?? $config['default-color']; 
+            $backgroundColor = $params['background-color'] ?? $config['default-background-color'];
+            $hoverColor = $params['hover-color'] ?? $config['default-hover-color'];
+            $borderColor = $params['border-color'] ?? $config['default-border-color']; 
+            $selectedColor = $params['selected-color'] ?? $config['default-selected-color']; 
+            $enableZoom = $params['enable-zoom'] ?? $config['default-enable-zoom']; 
+            $multiSelectRegion = $params['multiselect-region'] ?? $config['default-multiselect-region']; 
 
             $map = array(
                 'id' => $id,
@@ -84,8 +84,8 @@ class WorldMapsShortcode extends Shortcode {
         $config = $this->config->get('plugins.world-maps');
         
         // shortcode parameters overload plugin configuration
-        $color = $params['color'] ?? $config['color']; 
-        $hoverColor = $params['hover-color'] ?? $config['hover-color'];
+        $color = $params['color'] ?? $config['default-color']; 
+        $hoverColor = $params['hover-color'] ?? $config['default-hover-color'];
         $ref = $params['ref'] ?? ""; 
         $link = $params['link'] ?? "#"; 
         

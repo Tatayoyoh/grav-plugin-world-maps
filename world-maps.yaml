@@ -1,15 +1,13 @@
 enabled: true
-# Map <div> tag default values
 default-id: 'world-maps-plugin'
 default-class: ''
 default-height: '500px'
 default-width: '100%'
-# JQVMap default parameters
 default-shape: 'world'
-color: '#A9A9A9'
-background-color: '#FFFFFF'
-border-color: '#FFFFFF'
-hover-color: null
-selected-color: null
-multiselect-region: false
-enable-zoom: false
+default-color: '#A9A9A9'
+default-background-color: '#FFFFFF'
+default-border-color: '#FFFFFF'
+default-hover-color: null
+default-selected-color: null
+default-multiselect-region: false
+default-enable-zoom: false
