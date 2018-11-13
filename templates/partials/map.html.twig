@@ -1,0 +1,52 @@
+{% do assets.addCss("plugin://world-maps/assets/jqvmap/jqvmap.min.css") %}
+
+{% do assets.add('jquery', 101) %}
+{% do assets.addJs("plugin://world-maps/assets/jqvmap/jquery.vmap.min.js", 100) %}
+{% do assets.addJs("plugin://world-maps/assets/jqvmap/maps/jquery.vmap." ~ map.shape ~ ".js", 99) %}
+
+
+<div id="{{map.id}}" class="{{map.class}}" 
+    style="{% if map.height is not empty %}height:{{map.height}};{%endif%}
+           {% if map.width is not empty %}width:{{map.width}};{%endif%}">
+</div>
+
+<div id="{{map.id}}-legend" class="map-legend">
+    {% for legend in map.legends %}
+        <span style="color:{{legend.color}};">{{ legend.text }}</span>
+        {% if not loop.last %} - {% endif %}
+    {% endfor %}
+</div>
+
+{# Inline JS generation for JQVMap #}
+
+{% macro colorToString(color) %}
+{% if color is empty or color is null %}null{% else %}'{{color}}'{% endif %}
+{% endmacro %}
+
+{% macro boolToString(boolean) %}
+{% if boolean is not null and boolean %}true{% else %}false{% endif %}
+{% endmacro %}
+
+{% do assets.addInlineJs("
+$('#" ~ map.id ~ "').vectorMap({ 
+    map: '" ~ map.shape ~ "_en', 
+    enableZoom: " ~ _self.boolToString(map.enable_zoom) ~ ",
+    color: " ~ _self.colorToString(map.color) ~ ",
+    borderColor: " ~ _self.colorToString(map.border_color) ~ ",
+    backgroundColor: " ~ _self.colorToString(map.background_color) ~ ",
+    hoverColor: " ~ _self.colorToString(map.hover_color) ~ ",
+    selectedColor: " ~ _self.colorToString(map.selected_color) ~ ",
+    multiSelectRegion: " ~ _self.boolToString(map.multi_select_region) ~ "
+});
+", 98) %}
+
+{% for r in map.regions %}
+{% do assets.addInlineJs("
+$('#" ~ map.id ~ "').vectorMap('set', 'colors', { " ~ r.ref ~ ": '" ~ r.color ~ "'});
+$('#" ~ map.id ~ "').bind('regionClick.jqvmap', function(event, code, region){
+    if(code == '" ~ r.ref ~ "'){
+        location.href='" ~ r.link ~ "';
+    }
+});
+", 97) %}
+{% endfor %}

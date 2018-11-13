@@ -1,0 +1,30 @@
+name: World Maps
+version: 1.0.0
+description: Provide customizable vectorial world maps
+icon: globe
+author:
+  name: Widebob
+  email: info@widebob.com
+homepage: https://github.com/widebob/grav-plugin-world-maps
+demo: http://widebob.com/grav-world-maps-plugin
+keywords: grav, plugin, jqvmap, vector, map, world, travel, widebob
+bugs: https://github.com/widebob/grav-plugin-world-maps/issues
+docs: https://github.com/widebob/grav-plugin-world-maps/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - shortcode-core
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool

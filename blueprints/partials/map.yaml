@@ -1,0 +1,514 @@
+form:
+  fields:
+    header.map.title:
+      type: text
+      label: Map title
+    header.map.shape:
+      type: select
+      label: Map to use
+      autocomplete: on
+      placeholder: Select your map
+      default: world
+      options:
+        africa: africa
+        algeria: algeria
+        argentina: argentina
+        asia: asia
+        australia: australia
+        brazil: brazil
+        canada: canada
+        croatia: croatia
+        europe2: europe2
+        europe: europe
+        france: france
+        germany: germany
+        greece: greece
+        indonesia: indonesia
+        iran: iran
+        iraq: iraq
+        new_regions_france: new_regions_france
+        north-america: north-america
+        russia: russia
+        serbia: serbia
+        south-america: south-america
+        tunisia: tunisia
+        turkey: turkey
+        ukraine: ukraine
+        usa.counties: usa.counties
+        usa.districts: usa.districts
+        usa: usa
+        world: world
+    header.map.id:
+      type: text
+      label: Map id
+      default: world-maps-plugin
+    header.map.class:
+      type: text
+      label: Map class
+    header.map.height:
+      type: text
+      label: Map height
+      default: 500px
+    header.map.width:
+      type: text
+      label: Map width
+      default: 100%
+    header.map.zoom_enabled:
+      type: toggle
+      label: Zoom enabled
+      default: 0
+      options:
+        1: YES
+        0: NO
+      validate:
+        type: bool
+    header.map.color:
+      type: colorpicker
+      label: Map default color
+      default: 
+    header.map.border_color:
+      type: colorpicker
+      label: Map border color
+      default: 
+    header.map.background_color:
+      type: colorpicker
+      label: Map background color
+      default: 
+    header.map.hover_color:
+      type: colorpicker
+      label: Map hover color
+      default: 
+    header.map.selected_color:
+      type: colorpicker
+      label: Map selected codor
+      default: 
+    header.map.multi_select_region:
+      type: toggle
+      label: Multi select for regions
+      default: 1
+      options:
+        1: YES
+        0: NO
+      validate:
+        type: bool  
+    header.map.regions:
+        type: list
+        style: vertical
+        label: Customized regions
+        collapsed: true
+        fields:
+            .ref:
+              type: select
+              label: Region
+              autocomplete: on
+              placeholder: Select your region
+              options:
+                ae: United Arab Emirates
+                af: Afghanistan
+                ag: Antigua and Barbuda
+                al: Albania
+                am: Armenia
+                ao: Angola
+                ar: Argentina
+                at: Austria
+                au: Australia
+                az: Azerbaijan
+                ba: Bosnia and Herzegovina
+                bb: Barbados
+                bd: Bangladesh
+                be: Belgium
+                bf: Burkina Faso
+                bg: Bulgaria
+                bi: Burundi
+                bj: Benin
+                bn: Brunei Darussalam
+                bo: Bolivia
+                br: Brazil
+                bs: Bahamas
+                bt: Bhutan
+                bw: Botswana
+                by: Belarus
+                bz: Belize
+                ca: Canada
+                cd: Congo
+                cf: Central African Republic
+                cg: Congo
+                ch: Switzerland
+                ci: Cote d'Ivoire
+                cl: Chile
+                cm: Cameroon
+                cn: China
+                co: Colombia
+                cr: Costa Rica
+                cu: Cuba
+                cv: Cape Verde
+                cy: Cyprus
+                cz: Czech Republic
+                de: Germany
+                dj: Djibouti
+                dk: Denmark
+                dm: Dominica
+                do: Dominican Republic
+                dz: Algeria
+                ec: Ecuador
+                ee: Estonia
+                eg: Egypt
+                er: Eritrea
+                es: Spain
+                et: Ethiopia
+                fi: Finland
+                fj: Fiji
+                fk: Falkland Islands
+                fr: France
+                ga: Gabon
+                gb: United Kingdom
+                gd: Grenada
+                ge: Georgia
+                gf: French Guiana
+                gh: Ghana
+                gl: Greenland
+                gm: Gambia
+                gn: Guinea
+                gq: Equatorial Guinea
+                gr: Greece
+                gt: Guatemala
+                gw: Guinea-Bissau
+                gy: Guyana
+                hn: Honduras
+                hr: Croatia
+                ht: Haiti
+                hu: Hungary
+                id: Indonesia
+                ie: Ireland
+                il: Israel
+                in: India
+                iq: Iraq
+                ir: Iran
+                is: Iceland
+                it: Italy
+                jm: Jamaica
+                jo: Jordan
+                jp: Japan
+                ke: Kenya
+                kg: Kyrgyz Republic
+                kh: Cambodia
+                km: Comoros
+                kn: Saint Kitts and Nevis
+                kp: North Korea
+                kr: South Korea
+                kw: Kuwait
+                kz: Kazakhstan
+                la: Lao People's Democratic Republic
+                lb: Lebanon
+                lc: Saint Lucia
+                lk: Sri Lanka
+                lr: Liberia
+                ls: Lesotho
+                lt: Lithuania
+                lv: Latvia
+                ly: Libya
+                ma: Morocco
+                md: Moldova
+                mg: Madagascar
+                mk: Macedonia
+                ml: Mali
+                mm: Myanmar
+                mn: Mongolia
+                mr: Mauritania
+                mt: Malta
+                mu: Mauritius
+                mv: Maldives
+                mw: Malawi
+                mx: Mexico
+                my: Malaysia
+                mz: Mozambique
+                na: Namibia
+                nc: New Caledonia
+                ne: Niger
+                ng: Nigeria
+                ni: Nicaragua
+                nl: Netherlands
+                no: Norway
+                np: Nepal
+                nz: New Zealand
+                om: Oman
+                pa: Panama
+                pe: Peru
+                pf: French Polynesia
+                pg: Papua New Guinea
+                ph: Philippines
+                pk: Pakistan
+                pl: Poland
+                pt: Portugal
+                py: Paraguay
+                qa: Qatar
+                re: Reunion
+                ro: Romania
+                rs: Serbia
+                ru: Russian Federationß
+                rw: Rwanda
+                sa: Saudi Arabia
+                sb: Solomon Islands
+                sc: Seychelles
+                sd: Sudan
+                se: Sweden
+                si: Slovenia
+                sk: Slovakia
+                sl: Sierra Leone
+                sn: Senegal
+                so: Somalia
+                sr: Suriname
+                st: Sao Tome and Principe
+                sv: El Salvador
+                sy: Syrian Arab Republic
+                sz: Swaziland
+                td: Chad
+                tg: Togo
+                th: Thailand
+                tj: Tajikistan
+                tl: Timor-Leste
+                tm: Turkmenistan
+                tn: Tunisia
+                tr: Turkey
+                tt: Trinidad and Tobago
+                tw: Taiwan
+                tz: Tanzania
+                ua: Ukraine
+                ug: Uganda
+                us: United States of America
+                uy: Uruguay
+                uz: Uzbekistan
+                ve: Venezuela
+                vn: Vietnam
+                vu: Vanuatu
+                ye: Yemen
+                za: South Africa
+                zm: Zambia
+                zw: Zimbabwe
+                ak: Alaska
+                al: Alabama
+                ar: Arkansas
+                az: Arizona
+                ca: California
+                co: Colorado
+                ct: Connecticut
+                dc: District of Columbia
+                de: Delaware
+                fl: Florida
+                ga: Georgia
+                hi: Hawaii
+                ia: Iowa
+                id: Idaho
+                il: Illinois
+                in: Indiana
+                ks: Kansas
+                ky: Kentucky
+                la: Louisiana
+                ma: Massachusetts
+                md: Maryland
+                me: Maine
+                mi: Michigan
+                mn: Minnesota
+                mo: Missouri
+                ms: Mississippi
+                mt: Montana
+                nc: North Carolina
+                nd: North Dakota
+                ne: Nebraska
+                nh: New Hampshire
+                nj: New Jersey
+                nm: New Mexico
+                nv: Nevada
+                ny: New York
+                oh: Ohio
+                ok: Oklahoma
+                or: Oregon
+                pa: Pennsylvania
+                ri: Rhode Island
+                sc: South Carolina
+                sd: South Dakota
+                tn: Tennessee
+                tx: Texas
+                ut: Utah
+                va: Virginia
+                vt: Vermont
+                wa: Washington
+                wi: Wisconsin
+                wv: West Virginia
+                wy: Wyoming
+                ad: Andorra
+                al: Albania
+                am: Armenia
+                at: Austria
+                az: Azerbaijan
+                ba: Bosnia and Herzegovina
+                be: Belgium
+                bg: Bulgaria
+                by: Belarus
+                ch: Switzerland
+                cy: Cyprus
+                cz: Czech Republic
+                de: Germany
+                dk: Denmark
+                dz: Algeria
+                ee: Estonia
+                es: Spain
+                fi: Finland
+                fr: France
+                gb: United Kingdom
+                ge: Georgia
+                gl: Greenland
+                gr: Greece
+                hr: Croatia
+                hu: Hungary
+                ie: Ireland
+                il: Israel
+                iq: Iraq
+                ir: Iran
+                is: Iceland
+                it: Italy
+                jo: Jordan
+                kz: Kazakhstan
+                lb: Lebanon
+                li: Liechtenstein
+                lt: Lithuania
+                lu: Luxembourg
+                lv: Latvia
+                ma: Morocco
+                mc: Monaco
+                md: Moldova
+                me: Montenegro
+                mk: Macedonia
+                mt: Malta
+                nl: Netherlands
+                no: Norway
+                pl: Poland
+                pt: Portugal
+                ro: Romania
+                ru: Russian Federation
+                sa: Saudi Arabia
+                se: Sweden
+                si: Slovenia
+                sk: Slovakia
+                sm: San Marino
+                sr: Suriname
+                sy: Syrian Arab Republic
+                tm: Turkmenistan
+                tn: Tunisia
+                tr: Turkey
+                ua: Ukraine
+                bb: Brandenburg
+                be: Berlin
+                bw: Baden-WÃrttemberg
+                by: Bayern
+                hb: Bremen
+                he: Hessen
+                hh: Hamburg
+                mv: Mecklenburg-Vorpommern
+                ni: Niedersachsen
+                nw: Nordrhein-Westfalen
+                rp: Rheinland-Pfalz
+                sh: Schleswig-Holstein
+                sl: Saarland
+                sn: Sachsen
+                st: Sachsen-Anhalt
+                th: ThÃri
+                ch: Chukotka Autonomous Okrug
+                ka: Kamchatka Krai
+                ma: Magadan Oblast
+                sa: Sakha Republic
+                am: Amur Oblast
+                pr: Primorsky Krai
+                eu: Jewish Autonomous Oblast
+                ha: Khabarovsk Krai
+                sh: Sakhalin Oblast
+                om: Omsk Oblast
+                nv: Novosibirsk Oblast
+                al: Altai Krai
+                lt: Altai Republic
+                tv: Tuva Republic
+                hk: Republic of Khakassia
+                km: Kemerovo Oblast
+                tm: Tomsk Oblast
+                zb: Zabaykalsky Krai
+                br: Buryat Republic
+                ir: Irkutsk Oblast
+                kr: Krasnoyarsk Krai
+                ya: Yamalo-Nenets Autonomous Okrug
+                ht: Khanty–Mansi Autonomous Okrug
+                tu: Tyumen Oblast
+                ku: Kurgan Oblast
+                cl: Chelyabinsk Oblast
+                sv: Sverdlovsk Oblast
+                ar: Arkhangelsk Oblast
+                ne: Nenets Autonomous Okrug
+                ko: Komi Republic
+                mu: Murmansk Oblast
+                vo: Vologda Oblast
+                no: Novgorod Oblast
+                ps: Pskov Oblast
+                le: Leningrad Oblast
+                kl: Republic of Karelia
+                kn: Kaliningrad Oblast
+                da: Republic of Dagestan
+                st: Stavropol Krai
+                so: Republic of North Ossetia–Alania
+                kb: Kabardino-Balkar Republic
+                kh: Karachay–Cherkess Republic
+                cc: Chechen Republic
+                in: Republic of Ingushetia
+                ad: Republic of Adygea
+                ks: Krasnodar Krai
+                ro: Rostov Oblast
+                kk: Republic of Kalmykia
+                as: Astrakhan Oblast
+                vl: Volgograd Oblast
+                tr: Tver Oblast
+                sm: Smolensk Oblast
+                bn: Bryansk Oblast
+                ky: Kursk Oblast
+                bl: Belgorod Oblast
+                or: Oryol Oblast
+                kj: Kaluga Oblast
+                tl: Tula Oblast
+                lp: Lipetsk Oblast
+                mc: Moscow Oblast
+                rz: Ryazan Oblast
+                tb: Tambov Oblast
+                vm: Vladimir Oblast
+                iv: Ivanovo Oblast
+                yr: Yaroslavl Oblast
+                kt: Kostroma Oblast
+                nn: Nizhny Novgorod Oblast
+                mr: Republic of Mordovia
+                pz: Penza Oblast
+                sr: Saratov Oblast
+                ss: Samara Oblast
+                ob: Orenburg Oblast
+                bs: Republic of Bashkortostan
+                ul: Ulyanovsk Oblast
+                cu: Chuvash Republic
+                ta: Republic of Tatarstan
+                ml: Mari El Republic
+                ud: Udmurt Republic
+                ki: Kirov Oblast
+                pe: Perm Krai
+                vn: Voronezh Oblast
+            .color:
+              type: colorpicker
+              label: Color
+            .link:
+              type: pages
+              label: Page link
+    header.map.legends:
+        type: list
+        style: vertical
+        label: Map legends
+        collapsed: true
+        fields:
+            .text:
+              type: text
+              label: Legend text
+            .color:
+              type: colorpicker
+              label: Legend color
