@@ -13,18 +13,18 @@ class WorldMapsShortcode extends Shortcode {
             $config = $this->config->get('plugins.world-maps');
             
             // vmap html tag parameters
-            $id = $params['id'] ??  $config['default-id'];
-            $class = $params['class'] ??  $config['default-class'];
-            $height = $params['height'] ?? $config['default-height'];
-            $width = $params['width'] ?? $config['default-width'];
-            $shape = $params['shape'] ?? $config['default-shape'];
-            $color = $params['color'] ?? $config['default-color']; 
-            $backgroundColor = $params['background-color'] ?? $config['default-background-color'];
-            $hoverColor = $params['hover-color'] ?? $config['default-hover-color'];
-            $borderColor = $params['border-color'] ?? $config['default-border-color']; 
-            $selectedColor = $params['selected-color'] ?? $config['default-selected-color']; 
-            $enableZoom = $params['enable-zoom'] ?? $config['default-enable-zoom']; 
-            $multiSelectRegion = $params['multiselect-region'] ?? $config['default-multiselect-region']; 
+            $id = $params['id'] ??  $config['default_id'];
+            $class = $params['class'] ??  $config['default_class'];
+            $height = $params['height'] ?? $config['default_height'];
+            $width = $params['width'] ?? $config['default_width'];
+            $shape = $params['shape'] ?? $config['default_shape'];
+            $color = $params['color'] ?? $config['default_color']; 
+            $backgroundColor = $params['background-color'] ?? $config['default_background-color'];
+            $hoverColor = $params['hover-color'] ?? $config['default_hover-color'];
+            $borderColor = $params['border-color'] ?? $config['default_border-color']; 
+            $selectedColor = $params['selected-color'] ?? $config['default_selected-color']; 
+            $enableZoom = $params['enable-zoom'] ?? $config['default_enable-zoom']; 
+            $multiSelectRegion = $params['multiselect-region'] ?? $config['default_multiselect-region']; 
 
             $map = array(
                 'id' => $id,
@@ -84,8 +84,8 @@ class WorldMapsShortcode extends Shortcode {
         $config = $this->config->get('plugins.world-maps');
         
         // shortcode parameters overload plugin configuration
-        $color = $params['color'] ?? $config['default-color']; 
-        $hoverColor = $params['hover-color'] ?? $config['default-hover-color'];
+        $color = $params['color'] ?? $config['default_color']; 
+        $hoverColor = $params['hover-color'] ?? $config['default_hover-color'];
         $ref = $params['ref'] ?? ""; 
         $link = $params['link'] ?? "#"; 
         
