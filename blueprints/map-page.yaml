@@ -1,0 +1,16 @@
+title: Map
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        map:
+          type: tab
+          title: Map
+          ordering@: content
+          import@:
+            type: partials/map
+            context: blueprints://
