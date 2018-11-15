@@ -42,27 +42,29 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
-default-id: 'world-maps-plugin'
-default-class: ''
-default-height: '500px'
-default-width: '100%'
-default-shape: 'world'
-default-color: '#A9A9A9'
-default-background-color: '#FFFFFF'
-default-border-color: '#FFFFFF'
-default-hover-color: null
-default-selected-color: null
-default-multiselect-region: false
-default-enable-zoom: false
+js_group: ''
+js_priority: 80
+default_id: 'world-maps-plugin'
+default_class: ''
+default_height: '500px'
+default_width: '100%'
+default_shape: 'world'
+default_color: '#A9A9A9'
+default_background-color: '#FFFFFF'
+default_border-color: '#FFFFFF'
+default_hover-color: null
+default_selected-color: null
+default_multiselect-region: false
+default_enable-zoom: false
 ```
 
 Note that if you use the admin plugin, a file with your configuration, and named world-maps.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
 
 ## Usage
 
-There is two ways to integrate your map in a page. You can use it by simply add Shortcode in your page content (see **ShortCode example** section). Or you can populate the page headers (see **Page header example** section)
+**IMPORTANT: Don't forget to include you assets with `{{ assets.js() }}` in your base Twig template. Otherwhise the World Maps plugin will not works properly. If you are using assets groups like `{{ assets.js('mygroup') }}`, you can specify the group name with `js_group` plugin option in your `user/config/plugins/world-maps.yaml` file or with the admin interface.**
 
-> IMPORTANT: Don't forget to include you assets with `{{ assets.js() }}` in your base Twig template. Otherwhise the World Maps plugin will not works properly.
+There is two ways to integrate your map in a page. You can use it by simply add Shortcode in your page content (see **ShortCode example** section). Or you can populate the page headers (see **Page header example** section)
 
 Shortcode or header use both a **map** object configuration, that can contain **region** children and **legend** children with their own configurations.
 

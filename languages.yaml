@@ -1,3 +1,17 @@
 en:
   PLUGIN_WORLD_MAPS:
-    MYVAR: My variable
+    JS_GROUP: JS Assets group
+    JS_GROUP_HELP: Name of the assets group that will be used to include the plugin's Javascript. Let this field empty if you have no assets group.
+    JS_GROUP_PLACEHOLDER: JS assets group
+    JS_PRIO: JS Assets priority
+    JS_PRIO_HELP: Assets priority that will be used to include the plugin's Javascript. A hight number means a hight priority.
+    JS_PRIO_PLACEHOLDER: JS assets group
+fr:
+  PLUGIN_WORLD_MAPS:
+    JS_GROUP: Groupe d'assets Javascript
+    JS_GROUP_HELP: Nom du groupe d'assets qui sera utilisé pour inclure le Javascript du plugin. Laisser le champ vide si vous n'avez pas de group d'asset.
+    JS_GROUP_PLACEHOLDER: Groupe JS d'assets
+    JS_PRIO: Priorité des assets Javascript
+    JS_PRIO_HELP: Priorité des assets Javascript du plugin. Un nombre élevé signifie une plus haut priorité.
+    JS_PRIO_PLACEHOLDER: Groupe JS d'assets
+    

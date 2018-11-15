@@ -28,3 +28,21 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+    js_group:
+      type: text
+      size: small
+      label: PLUGIN_WORLD_MAPS.JS_GROUP
+      placeholder: PLUGIN_WORLD_MAPS.JS_GROUP_PLACEHOLDER
+      help: PLUGIN_WORLD_MAPS.JS_GROUP_HELP
+      default: ''
+    js_priority:
+      type: text
+      size: small
+      default: 80
+      label: PLUGIN_WORLD_MAPS.JS_PRIO
+      placeholder: PLUGIN_WORLD_MAPS.JS_PRIO_PLACEHOLDER
+      help: PLUGIN_WORLD_MAPS.JS_PRIO_HELP
+      validate:
+        type: int
+        min: 0
+        max: 65536

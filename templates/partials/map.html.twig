@@ -1,10 +1,20 @@
+{# Generate assets inclusion options #}
+{% set jsprio = config.plugins['world-maps'].js_priority %}
+{% set jsgroup = config.plugins['world-maps'].js_group %}
+
+{% if jsgroup and jsgroup is not empty %}
+    {% set options = {'priority':jsprio, 'group':jsgroup} %}
+{% else %}
+    {% set options = {'priority':jsprio} %}
+{% endif %}
+
+{# Assets inclusion #}
 {% do assets.addCss("plugin://world-maps/assets/jqvmap/jqvmap.min.css") %}
-
 {% do assets.add('jquery', 101) %}
-{% do assets.addJs("plugin://world-maps/assets/jqvmap/jquery.vmap.min.js", 100) %}
-{% do assets.addJs("plugin://world-maps/assets/jqvmap/maps/jquery.vmap." ~ map.shape ~ ".js", 99) %}
+{% do assets.addJs("plugin://world-maps/assets/jqvmap/jquery.vmap.min.js", options) %}
+{% do assets.addJs("plugin://world-maps/assets/jqvmap/maps/jquery.vmap." ~ map.shape ~ ".js", options) %}
 
-
+{# Plugin HTML #}
 <div id="{{map.id}}" class="{{map.class}}" 
     style="{% if map.height is not empty %}height:{{map.height}};{%endif%}
            {% if map.width is not empty %}width:{{map.width}};{%endif%}">
@@ -38,7 +48,7 @@ $('#" ~ map.id ~ "').vectorMap({
     selectedColor: " ~ _self.colorToString(map.selected_color) ~ ",
     multiSelectRegion: " ~ _self.boolToString(map.multi_select_region) ~ "
 });
-", 98) %}
+", options) %}
 
 {% for r in map.regions %}
 {% do assets.addInlineJs("
@@ -48,5 +58,5 @@ $('#" ~ map.id ~ "').bind('regionClick.jqvmap', function(event, code, region){
         location.href='" ~ r.link ~ "';
     }
 });
-", 97) %}
+", options) %}
 {% endfor %}
