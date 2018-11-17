@@ -19,12 +19,12 @@ class WorldMapsShortcode extends Shortcode {
             $width = $params['width'] ?? $config['default_width'];
             $shape = $params['shape'] ?? $config['default_shape'];
             $color = $params['color'] ?? $config['default_color']; 
-            $backgroundColor = $params['background-color'] ?? $config['default_background-color'];
-            $hoverColor = $params['hover-color'] ?? $config['default_hover-color'];
-            $borderColor = $params['border-color'] ?? $config['default_border-color']; 
-            $selectedColor = $params['selected-color'] ?? $config['default_selected-color']; 
-            $enableZoom = $params['enable-zoom'] ?? $config['default_enable-zoom']; 
-            $multiSelectRegion = $params['multiselect-region'] ?? $config['default_multiselect-region']; 
+            $backgroundColor = $params['background-color'] ?? $config['default_background_color'];
+            $hoverColor = $params['hover-color'] ?? $config['default_hover_color'];
+            $borderColor = $params['border-color'] ?? $config['default_border_color']; 
+            $selectedColor = $params['selected-color'] ?? $config['default_selected_color']; 
+            $enableZoom = $params['enable-zoom'] ?? $config['default_enable_zoom']; 
+            $multiSelectRegion = $params['multiselect-region'] ?? $config['default_multiselect_region']; 
 
             $map = array(
                 'id' => $id,
@@ -85,7 +85,7 @@ class WorldMapsShortcode extends Shortcode {
         
         // shortcode parameters overload plugin configuration
         $color = $params['color'] ?? $config['default_color']; 
-        $hoverColor = $params['hover-color'] ?? $config['default_hover-color'];
+        $hoverColor = $params['hover-color'] ?? $config['default_hover_color'];
         $ref = $params['ref'] ?? ""; 
         $link = $params['link'] ?? "#"; 
         

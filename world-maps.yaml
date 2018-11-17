@@ -7,9 +7,9 @@ default_height: '500px'
 default_width: '100%'
 default_shape: 'world'
 default_color: '#A9A9A9'
-default_background-color: '#FFFFFF'
-default_border-color: '#FFFFFF'
-default_hover-color: null
-default_selected-color: null
-default_multiselect-region: false
-default_enable-zoom: false
+default_background_color: '#FFFFFF'
+default_border_color: '#FFFFFF'
+default_hover_color: null
+default_selected_color: null
+default_multiselect_region: false
+default_enable_zoom: false
