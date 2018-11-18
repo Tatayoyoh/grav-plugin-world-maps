@@ -8,7 +8,7 @@ form:
       label: Map to use
       autocomplete: on
       placeholder: Select your map
-      default: world
+      config-default@: plugins.world-maps.default_shape
       options:
         africa: africa
         algeria: algeria
@@ -41,54 +41,55 @@ form:
     header.map.id:
       type: text
       label: Map id
-      default: world-maps-plugin
+      config-default@: plugins.world-maps.default_id
     header.map.class:
       type: text
       label: Map class
+      config-default@: plugins.world-maps.default_class
     header.map.height:
       type: text
       label: Map height
-      default: 500px
+      config-default@: plugins.world-maps.default_height
     header.map.width:
       type: text
       label: Map width
-      default: 100%
+      config-default@: plugins.world-maps.default_width
     header.map.zoom_enabled:
       type: toggle
       label: Zoom enabled
-      default: 0
+      config-default@: plugins.world-maps.default_enable_zoom
       options:
-        1: YES
-        0: NO
+        true: YES
+        false: NO
       validate:
         type: bool
     header.map.color:
       type: colorpicker
       label: Map default color
-      default: 
+      config-default@: plugins.world-maps.default_color
     header.map.border_color:
       type: colorpicker
       label: Map border color
-      default: 
+      config-default@: plugins.world-maps.default_border_color
     header.map.background_color:
       type: colorpicker
       label: Map background color
-      default: 
+      config-default@: plugins.world-maps.default_background_color
     header.map.hover_color:
       type: colorpicker
       label: Map hover color
-      default: 
+      config-default@: plugins.world-maps.default_hover_color
     header.map.selected_color:
       type: colorpicker
       label: Map selected codor
-      default: 
+      config-default@: plugins.world-maps.default_selected_color
     header.map.multi_select_region:
       type: toggle
       label: Multi select for regions
-      default: 1
+      config-default@: plugins.world-maps.default_multiselect_region
       options:
-        1: YES
-        0: NO
+        true: YES
+        false: NO
       validate:
         type: bool  
     header.map.regions:
