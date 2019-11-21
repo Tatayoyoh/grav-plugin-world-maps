@@ -1,0 +1,11 @@
+{% block content %}
+<section class="map-section">
+    <div class="map-section-display">
+        <h3>{{header.map.title}}</h3>
+        {% include 'partials/map.html.twig' with { map: header.map } %}
+    </div>
+    <div class="map-section-content">
+        {{content}}
+    </div>
+</section>
+{% endblock %}
