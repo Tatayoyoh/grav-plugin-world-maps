@@ -1,3 +1,12 @@
+# v1.0.1
+## 22/11/2019
+
+1. [](#bugfix)
+    * Missing template for modular
+
+1. [](#improved)
+    * Added REAMDE content
+
 # v1.0.0
 ## 14/11/2018
 
